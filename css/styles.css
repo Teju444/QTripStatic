@@ -38,12 +38,19 @@ footer {
   margin: 20px 0px;
 }
 
+
 .content {
   padding: 20px 0px;
   /* display: flex; */
   /* flex-wrap: wrap; */
 }
-
+ .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+ }
+ 
 /* ================================== */
 /* Layout page CSS */
 /* ================================== */
@@ -51,14 +58,32 @@ footer {
 .tile {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  color: white;
+  position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s all;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center
 }
 .tile img {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  height:100%;
+  width: 100%;
+  
 }
 .tile img:hover {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  filter: brightness(50%);
+  cursor: pointer;
+  transform: scale(1.2)
 }
 
 /* Hint: Notice the position:absolute and z-index properties. */
@@ -66,7 +91,7 @@ footer {
 .tile-text {
   position: absolute;
   z-index: 1;
-  text-transform: uppercase;
+  text-transform:uppercase;
   letter-spacing: 2px;
 }
 
@@ -74,15 +99,27 @@ footer {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/assets/hero.jpg");
+  
 
   /* TODO: MODULE_LAYOUT */
   /* 1. Set a specific height. */
   /* 2. Position and center the image to scale nicely on all screens. */
+  height:50vh;
+ background-size: cover;
+ background-position: center;
 }
 
+.heading{
+  color: antiquewhite;
+  position: relative;
+  
+
+}
 .hero-subheading {
   font-size: 24px;
   font-weight: 100;
+  color: whitesmoke;
+  text-align: justify;
 }
 .hero-input {
   width: 80%;
@@ -101,16 +138,23 @@ footer {
 /* ================================== */
 
 .adventure-card {
-  /* TODO: MODULE_ADVENTURES_GRID */
-  /* 1. Fill in the required properties. */
+  height: 100%;
+  position: relative;
+  width:100%;
 }
 .adventure-card img {
   /* TODO: MODULE_ADVENTURES_GRID */
   /* 1. Fill in the required properties. */
+  height: 100%;
+  width: 100%;
+
 }
 .adventure-card img:hover {
   /* TODO: MODULE_ADVENTURES_GRID */
   /* 1. Fill in the required properties. */
+  filter: brightness(50%);
+  cursor: pointer;
+ 
 }
 
 /* ================================== */
@@ -119,13 +163,13 @@ footer {
 
 .adventure-detail-card {
   /* TODO: MODULE_ADVENTURE_DETAILS */
-  /* 1. Fill in the required properties. */
-
+  /* 1. Fill in the required properties. *
 }
 
 .adventure-card-image {
   /* TODO: MODULE_ADVENTURE_DETAILS */
   /* 1. Fill in the required properties. */
+  height: 100%;
 }
 .adventure-card-image:hover {
   /* TODO: MODULE_ADVENTURE_DETAILS */
